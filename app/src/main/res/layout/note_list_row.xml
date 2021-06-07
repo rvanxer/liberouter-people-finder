@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/note_list_row_bg">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Posted By:"
+            android:id="@+id/noteRowAuthorTitle"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleBannerColor"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"/>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteRowAuthorText"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            />
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteRowDateText"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleBannerColor"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="15dp"
+            android:textStyle="italic"/>
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteRowContentText"
+            android:gravity="left|top"
+            android:inputType="none"
+            android:linksClickable="false"
+            android:background="@drawable/gui_block_editfield"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:lines="5"
+            android:editable="false"/>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:id="@+id/noteRowStatusTitle"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleBannerColor"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="15dp"
+            />
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteRowStatusText"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Known Location:"
+            android:id="@+id/noteRowLocationTitle"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleBannerColor"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="15dp"/>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteRowLocationText"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/black"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+</LinearLayout>

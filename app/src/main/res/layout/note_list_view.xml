@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/MainViewTitleBannerColor">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Notes on Missing Person"
+            android:background="@color/MainViewTitleBannerColor"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleTextColor"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/textView"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gui_block"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/linearLayout">
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noteViewNameText"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@android:color/black"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textSize="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/noteViewList"
+            android:layout_gravity="center"
+            android:divider="@color/MainViewTitleBannerColor"
+            android:dividerHeight="5dp"
+            android:drawSelectorOnTop="false"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:smoothScrollbar="true"
+            android:choiceMode="none"
+            android:clickable="false"
+            android:layout_weight="1"
+            android:fadingEdgeLength="0dp"
+            android:overScrollMode="never"/>
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="Add a Note"
+            android:id="@+id/noteViewAddButton"
+            android:background="@drawable/green_button_small"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"/>
+</LinearLayout>

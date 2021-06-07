@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="MainViewTitleBannerColor"       >#323A45</color>
+    <color name="MainViewTitleTextColor"         >#FFFFFF</color>
+
+    <!-- Publish Button in the MainView -->
+    <color name="BlueButtonLight"                >#14B9D5</color>
+    <color name="BlueButtonDark"                 >#0E778A</color>
+
+    <color name="GreenButtonLight"               >#C6DE64</color>
+    <color name="GreenButtonDark"                >#8B9E44</color>
+
+    <color name="GuiBlockForeground"             >#ffdcdfe4</color>
+
+
+    <!-- Message list activity colors -->
+    <color name="MsgViewBackgroundColor"        >#ffffff</color>
+    <color name="MsgViewTitleBannerColor"       >#323A45</color>
+    <color name="MsgViewTitleTextColor"         >#ffffff</color>
+
+
+
+    <!-- Name row item colors -->
+    <color name="NameRowForegroundColor"        >#ffdcdfe4</color>
+    <color name="NameRowSelectedColor"          >#B1B5C1</color>
+    <color name="NameRowTextColor"              >#323A45</color>
+
+
+</resources>

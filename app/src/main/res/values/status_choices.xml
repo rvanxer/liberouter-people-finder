@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="status_choices">
+        <item>Unspecified</item>
+        <item>I am seeking information</item>
+        <item>I am this person</item>
+        <item>This person is alive</item>
+        <item>This person is missing</item>
+    </string-array>
+</resources>

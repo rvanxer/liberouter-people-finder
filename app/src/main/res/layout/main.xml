@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@android:color/white">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Guerrilla People Finder"
+            android:background="@color/MainViewTitleBannerColor"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleTextColor"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/textView"
+            />
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:background="@color/MainViewTitleBannerColor">
+
+        <Button
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="I'm looking for someone"
+                android:id="@+id/SearchButton"
+                android:layout_gravity="center"
+                android:background="@drawable/green_button"
+                android:padding="20dp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="50dp"
+                android:textSize="18dp"/>
+
+        <Button
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="I have information about someone"
+                android:id="@+id/PostButton"
+                android:layout_gravity="center"
+                android:background="@drawable/blue_button"
+                android:padding="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+

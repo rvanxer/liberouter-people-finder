@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/MainViewTitleBannerColor">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Missing Persons"
+            android:background="@color/MainViewTitleBannerColor"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleTextColor"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/textView"/>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="6dp"
+            android:background="@drawable/name_list_top_spacer"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/frameLayout"
+            />
+
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/peopleViewList"
+            android:divider="@color/MainViewTitleBannerColor"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:smoothScrollbar="true"
+            android:choiceMode="none"
+            android:clickable="false"
+            android:background="@color/NameRowForegroundColor"
+            android:fadingEdgeLength="0dp"
+            android:overScrollMode="never"
+            android:minHeight="80dp"
+            android:layout_weight="1"/>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="6dp"
+            android:background="@drawable/name_list_bottom_spacer"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/frameLayout2"
+            android:layout_marginBottom="5dp"/>
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="Add a Missing Person Record"
+            android:id="@+id/peopleViewAddButton"
+            android:background="@drawable/green_button_small"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"/>
+</LinearLayout>

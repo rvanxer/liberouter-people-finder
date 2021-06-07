@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:minHeight="80dp"
+                    android:background="@drawable/name_row_selector"
+                    android:clickable="false"
+                    android:id="@+id/relativeLayout">
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:id="@+id/nameRowName"
+                android:layout_alignParentLeft="false"
+                android:textColor="@color/NameRowTextColor"
+                android:textSize="16dp"
+                android:paddingLeft="2dp"
+                android:layout_below="@+id/nameRowDate"
+                android:typeface="sans"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:id="@+id/nameRowStatus"
+            android:textColor="@color/NameRowTextColor"
+            android:textSize="14dp"
+            android:paddingLeft="2dp"
+            android:typeface="sans"
+            android:layout_below="@+id/nameRowName"
+            android:layout_alignParentLeft="true"
+            android:textStyle="italic"
+            />
+
+    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.5.2013 13:42"
+                android:id="@+id/nameRowDate"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/NameRowTextColor"
+                android:textSize="10dp"
+                android:paddingBottom="5dp"/>
+    </RelativeLayout>

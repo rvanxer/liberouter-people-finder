@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/MainViewTitleBannerColor">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Status of this Person"
+            android:background="@color/MainViewTitleBannerColor"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/MainViewTitleTextColor"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/textView"/>
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0dp"
+            android:overScrollMode="never"
+            android:id="@+id/scrollView">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/gui_block"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/linearLayout5">
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addNoteNameText"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gui_block"
+                    android:id="@+id/linearLayout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Status of this person"
+                        android:id="@+id/textView1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:background="@color/GuiBlockForeground"
+                        android:textColor="@android:color/black"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="20dp"
+                        android:layout_marginTop="5dp"/>
+
+                <Spinner
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addNoteStatusSpinner"
+                        android:layout_margin="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/gui_block"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/linearLayout3">
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Have you personally talked with this person AFTER the disaster?"
+                        android:id="@+id/textView4"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="18dp"/>
+
+                <RadioGroup
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:id="@+id/addNoteContactYesRadio"
+                            android:checked="false"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@android:color/black"/>
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:id="@+id/addNoteContactNoRadio"
+                            android:checked="false"
+                            android:textColor="@android:color/black"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/gui_block"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/linearLayout1">
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Message"
+                        android:id="@+id/textView2"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="20dp"/>
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addNoteMessageText"
+                        android:gravity="left|top"
+                        android:inputType="textMultiLine"
+                        android:linksClickable="false"
+                        android:background="@drawable/gui_block_editfield"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:lines="4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/gui_block"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/linearLayout2">
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last known location"
+                        android:id="@+id/textView3"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="20dp"/>
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addNoteLocationText"
+                        android:gravity="left|top"
+                        android:inputType="textMultiLine"
+                        android:linksClickable="false"
+                        android:background="@drawable/gui_block_editfield"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:lines="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/gui_block"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/linearLayout4">
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your name"
+                        android:id="@+id/textView5"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="20dp"/>
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addNoteAuthorText"
+                        android:gravity="left|top"
+                        android:inputType="textMultiLine"
+                        android:linksClickable="false"
+                        android:background="@drawable/gui_block_editfield"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:lines="1"
+                        android:singleLine="true"/>
+            </LinearLayout>
+
+            <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:text="Add Note"
+                    android:id="@+id/addNoteButton"
+                    android:background="@drawable/green_button_small"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
