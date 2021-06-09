@@ -62,26 +62,18 @@ public class NoteListAdapter
   protected void populateView( View rowLayout,
                                DataModel.LocalNote item ) {
     // Get the elements
-    TextView authorNameTitle =
-        ( TextView ) rowLayout.findViewById( R.id.noteRowAuthorTitle );
-    TextView authorNameText =
-        ( TextView ) rowLayout.findViewById( R.id.noteRowAuthorText );
+    TextView authorNameTitle = rowLayout.findViewById( R.id.noteRowAuthorTitle );
+    TextView authorNameText = rowLayout.findViewById( R.id.noteRowAuthorText );
 
-    TextView dateText =
-        ( TextView ) rowLayout.findViewById( R.id.noteRowDateText );
+    TextView dateText = rowLayout.findViewById( R.id.noteRowDateText );
 
-    EditText contentText =
-        ( EditText ) rowLayout.findViewById( R.id.noteRowContentText );
+    EditText contentText = rowLayout.findViewById( R.id.noteRowContentText );
 
-    TextView statusTitle =
-        ( TextView ) rowLayout.findViewById( R.id.noteRowStatusTitle );
-    TextView statusText =
-        ( TextView ) rowLayout.findViewById( R.id.noteRowStatusText );
+    TextView statusTitle = rowLayout.findViewById( R.id.noteRowStatusTitle );
+    TextView statusText = rowLayout.findViewById( R.id.noteRowStatusText );
 
-    TextView locationTitle =
-        ( TextView ) rowLayout.findViewById( R.id.noteRowLocationTitle );
-    TextView locationText =
-        ( TextView ) rowLayout.findViewById( R.id.noteRowLocationText );
+    TextView locationTitle = rowLayout.findViewById( R.id.noteRowLocationTitle );
+    TextView locationText = rowLayout.findViewById( R.id.noteRowLocationText );
 
 
     // Populate the elements

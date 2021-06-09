@@ -34,7 +34,6 @@ import com.spacetimenetworks.android.peoplefinder.database.DataModel;
 import com.spacetimenetworks.android.peoplefinder.database.DatabaseController;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -199,33 +198,19 @@ implements DatabaseController.OnInsertedNote,
   // Private - GUI
   //=========================================================================//
   private void setupGuiReferences() {
-    this.nameList =
-        ( ListView ) ( super.findViewById( R.id.peopleViewList ) );
-    this.addButton =
-        ( Button ) ( super.findViewById( R.id.peopleViewAddButton ) );
+    this.nameList = super.findViewById( R.id.peopleViewList );
+    this.addButton = super.findViewById( R.id.peopleViewAddButton );
   }
 
   private void setupGuiCallbacks() {
     // Add new record button
     this.addButton.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick( View view ) {
-            PeopleViewActivity.this.addButtonPushed();
-          }
-        }
+        view -> PeopleViewActivity.this.addButtonPushed()
     );
 
     // People view list
     this.nameList.setOnItemClickListener(
-        new AdapterView.OnItemClickListener() {
-          @Override
-          public void onItemClick( AdapterView<?> adapterView,
-                                   View view, int position, long id ) {
-            PeopleViewActivity.this.listElementPushed(
-                adapterView, view, position, id );
-          }
-        }
+        PeopleViewActivity.this::listElementPushed
     );
   }
 
@@ -238,7 +223,7 @@ implements DatabaseController.OnInsertedNote,
     this.adapter =
         new PersonsListAdapter(
             this, R.layout.name_list_row,
-            new ArrayList<DataModel.PersonName>( 0 ) );
+            new ArrayList<>( 0 ) );
 
     // Set the adapter
     this.nameList.setAdapter( this.adapter );
@@ -256,21 +241,14 @@ implements DatabaseController.OnInsertedNote,
 
     // Run a query
     this.db.findAllPersons(
-        new DatabaseController.FindPersonsQueryFinished() {
-          @Override
-          public void queryFinished(
-              final List<DataModel.PersonName> names ) {
-            // Must run this on the GUI thread
-            runOnUiThread(
-                new Runnable() {
-                  @Override
-                  public void run() {
-                    Log.d( TAG, "Setting items in adapter." );
-                    adapter.setItems( names );
-                  }
-                }
-            );
-          }
+        names -> {
+          // Must run this on the GUI thread
+          runOnUiThread(
+              () -> {
+                Log.d( TAG, "Setting items in adapter." );
+                adapter.setItems( names );
+              }
+          );
         }
     );
   }

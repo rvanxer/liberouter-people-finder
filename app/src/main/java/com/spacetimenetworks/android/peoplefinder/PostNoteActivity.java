@@ -236,20 +236,13 @@ public class PostNoteActivity
   // Private - GUI
   //=========================================================================//
   private void setupGuiReferences() {
-    this.nameText =
-        ( TextView ) super.findViewById( R.id.addNoteNameText );
-    this.statusSpinner =
-        ( Spinner ) super.findViewById( R.id.addNoteStatusSpinner );
-    this.contactYesRadio =
-        ( RadioButton ) super.findViewById( R.id.addNoteContactYesRadio );
-    this.messageText =
-        ( TextView ) super.findViewById( R.id.addNoteMessageText );
-    this.locationText =
-        ( TextView ) super.findViewById( R.id.addNoteLocationText );
-    this.authorText =
-        ( TextView ) super.findViewById( R.id.addNoteAuthorText );
-    this.sendButton =
-        ( Button ) super.findViewById( R.id.addNoteButton );
+    this.nameText = super.findViewById( R.id.addNoteNameText );
+    this.statusSpinner = super.findViewById( R.id.addNoteStatusSpinner );
+    this.contactYesRadio = super.findViewById( R.id.addNoteContactYesRadio );
+    this.messageText = super.findViewById( R.id.addNoteMessageText );
+    this.locationText = super.findViewById( R.id.addNoteLocationText );
+    this.authorText = super.findViewById( R.id.addNoteAuthorText );
+    this.sendButton = super.findViewById( R.id.addNoteButton );
   }
 
   private void setupGuiCallbacks() {

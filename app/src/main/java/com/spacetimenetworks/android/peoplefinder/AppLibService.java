@@ -546,16 +546,11 @@ implements DatabaseController.OnInsertedPerson,
 
     // Query the database for all un-routed records and then publish them
     this.db.getAllUnrouted(
-        new DatabaseController.GetAllUnroutedQueryFinished() {
-          @Override
-          public void queryFinished(
-              Collection<DataModel.SerializablePerson> records,
-              Map<String, String> picPaths ) {
-            // TODO: Should probably not do this from the database thread
-            Log.d( TAG, "Got " + records.size() + " un-routed records:" );
+        ( records, picPaths ) -> {
+          // TODO: Should probably not do this from the database thread
+          Log.d( TAG, "Got " + records.size() + " un-routed records:" );
 
-            publishRecords( records, picPaths );
-          }
+          publishRecords( records, picPaths );
         }
     );
 

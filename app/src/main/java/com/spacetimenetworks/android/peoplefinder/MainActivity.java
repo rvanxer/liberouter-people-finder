@@ -25,7 +25,6 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 
 import com.spacetimenetworks.android.peoplefinder.database.DatabaseController;
@@ -140,27 +139,17 @@ public class MainActivity
   // Private - GUI
   //=========================================================================//
   private void setupGuiReferences() {
-    this.searchButton = ( Button ) super.findViewById( R.id.SearchButton );
-    this.postButton = ( Button ) super.findViewById( R.id.PostButton );
+    this.searchButton = super.findViewById( R.id.SearchButton );
+    this.postButton = super.findViewById( R.id.PostButton );
   }
 
   private void setupGuiCallbacks() {
     this.searchButton.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick( View view ) {
-            MainActivity.this.searchButtonPushed();
-          }
-        }
+        view -> MainActivity.this.searchButtonPushed()
     );
 
     this.postButton.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick( View view ) {
-            MainActivity.this.postButtonPushed();
-          }
-        }
+        view -> MainActivity.this.postButtonPushed()
     );
   }
   //=========================================================================//

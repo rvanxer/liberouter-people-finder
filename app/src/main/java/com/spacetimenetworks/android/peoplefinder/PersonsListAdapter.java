@@ -41,8 +41,8 @@ public class PersonsListAdapter
   // Instance vars
   //==========================================================================//
   // Formatting of the timestamp in list items
-  private String datePattern = "HH:mm:ss d.M.yyyy";
-  private SimpleDateFormat timeformatter = new SimpleDateFormat( datePattern );
+  private final String datePattern = "HH:mm:ss d.M.yyyy";
+  private final SimpleDateFormat timeformatter = new SimpleDateFormat( datePattern );
   //==========================================================================//
 
 
@@ -63,12 +63,9 @@ public class PersonsListAdapter
   protected void populateView( View rowLayout,
                                DataModel.PersonName item ) {
     // Get the elements
-    TextView nameText =
-        ( TextView ) rowLayout.findViewById( R.id.nameRowName );
-    TextView statusText =
-        ( TextView ) rowLayout.findViewById( R.id.nameRowStatus );
-    TextView dateText =
-        ( TextView ) rowLayout.findViewById( R.id.nameRowDate );
+    TextView nameText = rowLayout.findViewById( R.id.nameRowName );
+    TextView statusText = rowLayout.findViewById( R.id.nameRowStatus );
+    TextView dateText = rowLayout.findViewById( R.id.nameRowDate );
 
     // Populate the elements
     nameText.setText( item.fullName );

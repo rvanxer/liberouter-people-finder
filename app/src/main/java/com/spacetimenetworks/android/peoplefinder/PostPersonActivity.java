@@ -283,39 +283,24 @@ public class PostPersonActivity
   // Private - GUI
   //=========================================================================//
   private void setupGuiReferences() {
-    this.familyNameField =
-        ( EditText ) ( super
-            .findViewById( R.id.postPersonFamilyNameText ) );
-    this.givenNameField =
-        ( EditText ) ( super.findViewById( R.id.postPersonGivenNameText ) );
-    this.altNamesField =
-        ( EditText ) ( super.findViewById( R.id.postPersonAltNamesText ) );
+    this.familyNameField = super.findViewById( R.id.postPersonFamilyNameText );
+    this.givenNameField = super.findViewById( R.id.postPersonGivenNameText );
+    this.altNamesField = super.findViewById( R.id.postPersonAltNamesText );
 
-    this.sexSpinner =
-        ( Spinner ) ( super.findViewById( R.id.postPersonSex ) );
-    this.ageField =
-        ( EditText ) ( super.findViewById( R.id.postPersonAgeText ) );
+    this.sexSpinner = super.findViewById( R.id.postPersonSex );
+    this.ageField = super.findViewById( R.id.postPersonAgeText );
 
-    this.streetField =
-        ( EditText ) ( super.findViewById( R.id.postPersonStreetText ) );
-    this.neighborhoodField =
-        ( EditText ) ( super.findViewById( R.id.postPersonNghbrhoodText ) );
-    this.cityField =
-        ( EditText ) ( super.findViewById( R.id.postPersonCityText ) );
-    this.stateField =
-        ( EditText ) ( super.findViewById( R.id.postPersonStateText ) );
-    this.zipField =
-        ( EditText ) ( super.findViewById( R.id.postPersonZipText ) );
-    this.countryField =
-        ( EditText ) ( super.findViewById( R.id.postPersonCountryText ) );
+    this.streetField = super.findViewById( R.id.postPersonStreetText );
+    this.neighborhoodField = super.findViewById( R.id.postPersonNghbrhoodText );
+    this.cityField = super.findViewById( R.id.postPersonCityText );
+    this.stateField = super.findViewById( R.id.postPersonStateText );
+    this.zipField = super.findViewById( R.id.postPersonZipText );
+    this.countryField = super.findViewById( R.id.postPersonCountryText );
 
-    this.descriptionField =
-        ( EditText ) ( super.findViewById( R.id.postPersonDescText ) );
+    this.descriptionField = super.findViewById( R.id.postPersonDescText );
 
-    this.addPhotoButton =
-        ( Button ) ( super.findViewById( R.id.postPersonPhotoButton ) );
-    this.publishButton =
-        ( Button ) ( super.findViewById( R.id.postPersonPublishButton ) );
+    this.addPhotoButton = super.findViewById( R.id.postPersonPhotoButton );
+    this.publishButton = super.findViewById( R.id.postPersonPublishButton );
   }
 
   private void setupGuiCallbacks() {

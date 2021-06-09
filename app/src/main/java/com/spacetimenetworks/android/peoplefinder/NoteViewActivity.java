@@ -26,7 +26,6 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -35,7 +34,6 @@ import com.spacetimenetworks.android.peoplefinder.database.DataModel;
 import com.spacetimenetworks.android.peoplefinder.database.DatabaseController;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Activity that displays notes for a given person. The person ID is passed in
@@ -181,23 +179,15 @@ public class NoteViewActivity
   // Private - GUI
   //=========================================================================//
   private void setupGuiReferences() {
-    this.nameText =
-        ( TextView ) ( super.findViewById( R.id.noteViewNameText ) );
-    this.noteList =
-        ( ListView ) ( super.findViewById( R.id.noteViewList ) );
-    this.addButton =
-        ( Button ) ( super.findViewById( R.id.noteViewAddButton ) );
+    this.nameText = super.findViewById( R.id.noteViewNameText );
+    this.noteList = super.findViewById( R.id.noteViewList );
+    this.addButton = super.findViewById( R.id.noteViewAddButton );
   }
 
   private void setupGuiCallbacks() {
     // Add new record button
     this.addButton.setOnClickListener(
-        new View.OnClickListener() {
-          @Override
-          public void onClick( View view ) {
-            NoteViewActivity.this.addButtonPushed();
-          }
-        }
+        view -> NoteViewActivity.this.addButtonPushed()
     );
   }
 
@@ -210,7 +200,7 @@ public class NoteViewActivity
     this.adapter =
         new NoteListAdapter(
             this, R.layout.note_list_row,
-            new ArrayList<DataModel.LocalNote>( 0 ) );
+            new ArrayList<>( 0 ) );
 
     // Set the adapter
     this.noteList.setAdapter( this.adapter );
@@ -235,21 +225,14 @@ public class NoteViewActivity
         // Person ID to get notes for
         this.personID,
         // Callback after results arrive
-        new DatabaseController.GetNotesQueryFinished() {
-          @Override
-          public void queryFinished(
-              final List<DataModel.LocalNote> rows ) {
-            // Must run this on the GUI thread
-            runOnUiThread(
-                new Runnable() {
-                  @Override
-                  public void run() {
-                    Log.d( TAG, "Setting items in adapter." );
-                    adapter.setItems( rows );
-                  }
-                }
-            );
-          }
+        rows -> {
+          // Must run this on the GUI thread
+          runOnUiThread(
+              () -> {
+                Log.d( TAG, "Setting items in adapter." );
+                adapter.setItems( rows );
+              }
+          );
         }
     );
 
@@ -259,25 +242,16 @@ public class NoteViewActivity
         // Person ID to query
         this.personID,
         // Result handling
-        new DatabaseController.GetPersonDetailsQueryFinished() {
-          @Override
-          public void queryFinished(
-              final DataModel.LocalPerson row ) {
-            // Precondition check
-            if ( row == null ) {
-              Log.d( TAG, "Couldn't refresh view, no person ID '" +
-                          personID + "' found in database." );
-              return;
-            }
-
-            // Update the fields from the GUI thread
-            runOnUiThread( new Runnable() {
-              @Override
-              public void run() {
-                nameText.setText( row.person.identity.name.fullName );
-              }
-            } );
+        row -> {
+          // Precondition check
+          if ( row == null ) {
+            Log.d( TAG, "Couldn't refresh view, no person ID '" +
+                        personID + "' found in database." );
+            return;
           }
+
+          // Update the fields from the GUI thread
+          runOnUiThread( () -> nameText.setText( row.person.identity.name.fullName ) );
         }
     );
   }

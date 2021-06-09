@@ -212,43 +212,23 @@ public class PersonDetailActivity
   // Private - GUI
   //=========================================================================//
   private void setupGuiReferences() {
-    this.noteCountText =
-        ( TextView ) ( super
-            .findViewById( R.id.personDetailNoteCountText ) );
-    this.fullNameText =
-        ( TextView ) ( super
-            .findViewById( R.id.personDetailFullNameText ) );
-    this.altNamesText =
-        ( TextView ) ( super
-            .findViewById( R.id.personDetailAltNamesText ) );
-    this.sexText =
-        ( TextView ) ( super.findViewById( R.id.personDetailSexText ) );
-    this.ageText =
-        ( TextView ) ( super.findViewById( R.id.personDetailAgeText ) );
+    this.noteCountText = super.findViewById( R.id.personDetailNoteCountText );
+    this.fullNameText = super.findViewById( R.id.personDetailFullNameText );
+    this.altNamesText = super.findViewById( R.id.personDetailAltNamesText );
+    this.sexText = super.findViewById( R.id.personDetailSexText );
+    this.ageText = super.findViewById( R.id.personDetailAgeText );
 
-    this.homeStreetText =
-        ( TextView ) ( super.findViewById( R.id.personDetailStreetText ) );
-    this.homeNeighborhoodText =
-        ( TextView ) ( super
-            .findViewById( R.id.personDetailNeighborhoodText ) );
-    this.homeCity =
-        ( TextView ) ( super.findViewById( R.id.personDetailCityText ) );
-    this.homeStateText =
-        ( TextView ) ( super.findViewById( R.id.personDetailStateText ) );
-    this.homeZipText =
-        ( TextView ) ( super.findViewById( R.id.personDetailZipText ) );
-    this.homeCountryText =
-        ( TextView ) ( super.findViewById( R.id.personDetailCountryText ) );
+    this.homeStreetText = super.findViewById( R.id.personDetailStreetText );
+    this.homeNeighborhoodText = super.findViewById( R.id.personDetailNeighborhoodText );
+    this.homeCity = super.findViewById( R.id.personDetailCityText );
+    this.homeStateText = super.findViewById( R.id.personDetailStateText );
+    this.homeZipText = super.findViewById( R.id.personDetailZipText );
+    this.homeCountryText = super.findViewById( R.id.personDetailCountryText );
 
-    this.descriptionText =
-        ( EditText ) ( super
-            .findViewById( R.id.personDetailDescriptionText ) );
+    this.descriptionText = super.findViewById( R.id.personDetailDescriptionText );
 
-    this.addNoteButton =
-        ( Button ) ( super.findViewById( R.id.personDetailNewNoteButton ) );
-    this.seeNotesButton =
-        ( Button ) ( super
-            .findViewById( R.id.personDetailSeeNotesButton ) );
+    this.addNoteButton = super.findViewById( R.id.personDetailNewNoteButton );
+    this.seeNotesButton = super.findViewById( R.id.personDetailSeeNotesButton );
   }
 
   private void setupGuiCallbacks() {
@@ -300,31 +280,28 @@ public class PersonDetailActivity
           }
 
           // Update the fields from the GUI thread
-          runOnUiThread( new Runnable() {
-            @Override
-            public void run() {
-              fullNameText
-                  .setText( row.person.identity.name.fullName );
-              setOrHide( altNamesText,
-                  row.person.identity.name.alternateNames );
+          runOnUiThread( () -> {
+            fullNameText
+                .setText( row.person.identity.name.fullName );
+            setOrHide( altNamesText,
+                row.person.identity.name.alternateNames );
 
-              setOrHide( sexText, row.person.identity.sex );
-              setOrHide( ageText, row.person.identity.age );
+            setOrHide( sexText, row.person.identity.sex );
+            setOrHide( ageText, row.person.identity.age );
 
-              setOrHide( homeStreetText,
-                  row.person.identity.home.street );
-              setOrHide( homeNeighborhoodText,
-                  row.person.identity.home.neighborhood );
-              setOrHide( homeCity, row.person.identity.home.city );
-              setOrHide( homeStateText,
-                  row.person.identity.home.state );
-              setOrHide( homeZipText, row.person.identity.home.zip );
-              setOrHide( homeCountryText,
-                  row.person.identity.home.country );
+            setOrHide( homeStreetText,
+                row.person.identity.home.street );
+            setOrHide( homeNeighborhoodText,
+                row.person.identity.home.neighborhood );
+            setOrHide( homeCity, row.person.identity.home.city );
+            setOrHide( homeStateText,
+                row.person.identity.home.state );
+            setOrHide( homeZipText, row.person.identity.home.zip );
+            setOrHide( homeCountryText,
+                row.person.identity.home.country );
 
-              descriptionText
-                  .setText( row.person.identity.description );
-            }
+            descriptionText
+                .setText( row.person.identity.description );
           } );
         }
     );
