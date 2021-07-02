@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">People Finder</string>
-
-
-
+    <string name="app_name_guerrilla">Guerrilla People Finder</string>
+    <string name="btn_report_other">I have information about someone</string>
+    <string name="btn_looking_for">I\'m looking for someone</string>
 </resources>
